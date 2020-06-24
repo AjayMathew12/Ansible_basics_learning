@@ -1,0 +1,10 @@
+---
+
+- hosts: webservers
+  tasks:
+    - name: System Uptime
+      command: uptime
+      register: uptime
+
+    - debug:
+       var: uptime.stdout
